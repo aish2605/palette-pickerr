@@ -120,23 +120,23 @@ return(
                   <div id="bg-images">
                     <h2 id ='sub-heading'>Choose your background Image</h2>
                     <div id="images">
-                      <button  id="bg-img1"onClick={()=>setBackground('sky.jpg')}/>
+                      <button  id="bg-img1"onClick={()=>setBackground('/images/sky.jpg')}/>
 
-                      <button  id="bg-img2"onClick={()=>setBackground('beach.webp')}/>
+                      <button  id="bg-img2"onClick={()=>setBackground('/images/beach.webp')}/>
 
-                      <button  id="bg-img3"onClick={()=>setBackground('blueflower.jpg')}/>
+                      <button  id="bg-img3"onClick={()=>setBackground('/images/blueflower.jpg')}/>
 
-                      <button  id="bg-img4"onClick={()=>setBackground('forest.jpg')}/>
+                      <button  id="bg-img4"onClick={()=>setBackground('/images/forest.jpg')}/>
 
-                      <button  id="bg-img5"onClick={()=>setBackground('flower.avif')}/>
+                      <button  id="bg-img5"onClick={()=>setBackground('/images/flower.avif')}/>
 
-                      <button  id="bg-img6"onClick={()=>setBackground('ocean.jpg')}/>
+                      <button  id="bg-img6"onClick={()=>setBackground('/images/ocean.jpg')}/>
 
-                      <button  id="bg-img7"onClick={()=>setBackground('sun.jpg')}/>
+                      <button  id="bg-img7"onClick={()=>setBackground('/images/sun.jpg')}/>
 
-                      <button  id="bg-img8"onClick={()=>setBackground('sunshine.avif')}/>
+                      <button  id="bg-img8"onClick={()=>setBackground('/images/sunshine.avif')}/>
 
-                      <button  id="bg-img9"onClick={()=>setBackground('pinkflower.jpg')}/>
+                      <button  id="bg-img9"onClick={()=>setBackground('/images/pinkflower.jpg')}/>
 
                     </div>
 
