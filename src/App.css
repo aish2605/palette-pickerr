@@ -5,14 +5,15 @@
   justify-content: center;
   flex-wrap: wrap;
   row-gap: 10px;
+  background-color: rgb(133, 23, 105);
   
 }
 
 #heading{
-
-  color:rgb(38, 108, 239);
+  color:rgb(212, 158, 237);
+  text-shadow: 4px 0px 4px rgb(180, 196, 225);
   font-size: 40px;
-
+ 
 }
 
 .parent{
@@ -22,12 +23,12 @@
   justify-content: space-around;
   padding: 13px 4px 13px 4px;
   row-gap:30px;
-  width:100vw;
-  height:680px;
-  background-image: url("/images/background.jpeg");
-  background-position: center;
-  background-size: cover;
+  width:100%;
+  height:100%;
+  background-image: linear-gradient(rgb(218, 183, 236),rgb(234, 138, 229));
+  margin:auto;
 }
+
 
 
 
@@ -36,7 +37,8 @@
   background-position: center;
   border: 2px solid black;
   width:300px;
-  height:400px
+  height:700px
+  
  
   
 }
@@ -44,7 +46,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  row-gap: 10px;
+  row-gap: 20px;
   justify-content: center;
   flex-direction: column;
   padding-left: 10px;
@@ -78,6 +80,7 @@
     vertical-align: middle;
     border: 1px solid black;
 
+
   }
   
   #download-btn{
@@ -90,7 +93,7 @@
     color: white;
     border-radius: 8px;
     cursor: pointer;
-    background-color: rgb(38, 108, 239);
+    background-color: rgb(162, 24, 144);
   }
   
   
@@ -139,7 +142,7 @@
     border: none;
     cursor: pointer;
   }
-  #pink{
+  #darkpink{
     height: 45px;
     width: 45px;
     background-color: pink;
@@ -149,7 +152,7 @@
   #skyblue{
     height: 45px;
     width: 45px;
-    background-color:skyblue;
+    background-color:navy;
     border: none;
     cursor: pointer;
   }
@@ -163,7 +166,7 @@
   #pink{
     height: 45px;
     width: 45px;
-    background-color:rgb(216, 83, 174);
+    background-color:rgb(162, 91, 200);
     border: none;
     cursor: pointer;
   }
@@ -174,14 +177,73 @@
     border: none;
     cursor: pointer;
   }
+ 
+  #mediumvioletred{
+    height: 45px;
+    width: 45px;
+    background-color:mediumvioletred;
+    border: none;
+    cursor: pointer;
+  }
+  #lime{
+    height: 45px;
+    width: 45px;
+    background-color:lime;
+    border: none;
+    cursor: pointer;
+  }
+  #slategray{
+    height: 45px;
+    width: 45px;
+    background-color:slategray;
+    border: none;
+    cursor: pointer;
+  }
+  #teal{
+    height: 45px;
+    width: 45px;
+    background-color:teal;
+    border: none;
+    cursor: pointer;
+  }
+  #lavender{
+    height: 45px;
+    width: 45px;
+    background-color:lavender;
+    border: none;
+    cursor: pointer;
+  }
+  #indigo{
+    height: 45px;
+    width: 45px;
+    background-color:indigo;
+    border: none;
+    cursor: pointer;
+  }
+  #salmon{
+    height: 45px;
+    width: 45px;
+    background-color:salmon;
+    border: none;
+    cursor: pointer;
+  }
+  #olive{
+    height: 45px;
+    width: 45px;
+    background-color:olive;
+    border: none;
+    cursor: pointer;
+  }
   #text-color{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 10px 0 10px 0;
     row-gap: 20px;
    
   }
+
   
   #bg-color{
     display: flex;
@@ -189,14 +251,18 @@
     row-gap: 20px;
     align-items: center;
     padding: 10px 0 10px 0;
+    
    
   }
   
   
   #text-color-names{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(10,1fr );
+   width:100%;
+   max-width:600px;
     column-gap: 10px;
+    row-gap: 10px;
   }
   #font-family{
     display: flex;
@@ -205,12 +271,17 @@
     padding: 10px 0 10px 0;
     
 
+  }@media (max-width:600px){
+    #text-color-names{
+      grid-template-columns: repeat(5,1fr );
+    }
   }
   
   
   #sub-heading{
     font-size: 25px;
-    color:rgb(38, 108, 239);
+    color:rgb(181, 8, 152);
+    text-shadow: 5px 7px 10px white;
   }
   
   #times-new{
@@ -253,6 +324,15 @@
   
   #impact{
     font-family: Impact;
+    border:2px solid black;
+    border-radius: 5px;
+    box-shadow: black;
+    background-color: rgb(225, 217, 217);
+    cursor:pointer;
+  }
+ 
+  #monospace{
+    font-family: monospace;
     border:2px solid black;
     border-radius: 5px;
     box-shadow: black;
@@ -339,8 +419,74 @@
     border: none;
     cursor: pointer;
   }
+  #bg-img10{
+    width:50px;
+    height:50px;
+    background-image:url("/images/moon.jpg");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+  #bg-img11{
+    width:50px;
+    height:50px;
+    background-image:url("/images/mountain.jpg");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+  #bg-img12{
+    width:50px;
+    height:50px;
+    background-image:url("/images/lily.jpg");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+  #bg-img13{
+    width:50px;
+    height:50px;
+    background-image:url("/images/night.jpg");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+  #bg-img14{
+    width:50px;
+    height:50px;
+    background-image:url("/images/road.jpg");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
   #images{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(7,1fr );
+   width:100%;
+   max-width:600px;
     column-gap: 10px;
+    row-gap: 10px;
+  }
+  @media (max-width:600px){
+    #images{
+      grid-template-columns: repeat(4,1fr );
+    }
+  }
+  #btn{
+    width: 60px;
+    height: 30px;
+    background-color: rgb(130, 30, 133);
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: aliceblue;
+    
+  }
+  #font{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    column-gap: 20px;
   }

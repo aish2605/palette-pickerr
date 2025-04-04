@@ -5,8 +5,26 @@ import screenshot from "html2canvas"
 function App(){
   const[tcolor, setTColor] = useState('000')
   const[bgCol, setBgCol] = useState('000')
-  
+  const [fontSize,setFontSize]= useState(16);
   const image = useRef()
+
+  const increaseFont = ()=> setFontSize((prev)=>prev + 2);
+
+
+  if (image.current) {
+    image.current.style.fontSize = `${fontSize + 2}px`;
+  }
+
+  const decreaseFont = ()=> { if(fontSize>10){
+    setFontSize((prev)=> prev - 2);
+  
+  if (image.current) {
+    image.current.style.fontSize = `${fontSize - 2}px`;
+  }
+}
+};
+  
+ 
 
   const textColor= (colorName)=>{
     image.current.style.color=colorName
@@ -34,6 +52,7 @@ function App(){
     image.current.style.backgroundSize = "cover";
     image.current.style.backgroundPosition= "center";
 };
+
   
 
 return(
@@ -47,7 +66,14 @@ return(
           
             <div id='child1'>
                 <h1  ref={image}  contentEditable="true" id="text">Write your text...</h1>
-                <button id="download-btn" onClick={downloadImage}>Download</button>
+                  <h1 id="sub-heading">Change font size</h1>
+                  <div id="font">
+                  <button id='btn' onClick={decreaseFont}>A-</button>
+                  <button  id='btn'onClick={increaseFont}>A+</button>
+                </div>
+                <div>
+                <button id="download-btn" onClick={downloadImage}>Download-image</button>
+                </div>
             </div>
 
             <div id='child2'>
@@ -61,10 +87,18 @@ return(
                     <button id='purple' onClick={()=>{textColor('purple')}}></button>
                     <button id='yellow' onClick={()=>{textColor('yellow')}}></button>
                     <button id='pink' onClick={()=>{textColor('pink')}}></button>
-                    <button id='skyblue' onClick={()=>{textColor('skyblue')}}></button>
+                    <button id='skyblue' onClick={()=>{textColor('navy')}}></button>
                     <button id='orange' onClick={()=>{textColor('orange')}}></button>
-                    <button id='pink' onClick={()=>{textColor('pink')}}></button>
+                    <button id='darkpink' onClick={()=>{textColor(rgb(162, 91, 200))}}></button>
                     <button id='blue' onClick={()=>{textColor('blue')}}></button>
+                    <button id='mediumvioletred' onClick={()=>{textColor('mediumvioletred')}}></button>
+                    <button id='lime' onClick={()=>{textColor('lime')}}></button>
+                    <button id='slategray' onClick={()=>{textColor('slategray')}}></button>
+                    <button id='teal' onClick={()=>{textColorolor('teal')}}></button>
+                    <button id='lavender' onClick={()=>{textColor('lavender')}}></button>
+                    <button id='indigo' onClick={()=>{textColor('indigo')}}></button>
+                    <button id='salmon' onClick={()=>{textColor('salmon')}}></button>
+                    <button id='olive' onClick={()=>{textColor('olive')}}></button>
                    
                     
                     <input 
@@ -89,10 +123,18 @@ return(
                     <button id='purple' onClick={()=>{bgColor('purple')}}></button>
                     <button id='yellow' onClick={()=>{bgColor('yellow')}}></button>
                     <button id='pink' onClick={()=>{bgColor('pink')}}></button>
-                    <button id='skyblue' onClick={()=>{bgColor('skyblue')}}></button>
+                    <button id='skyblue' onClick={()=>{bgColor('navy')}}></button>
                     <button id='orange' onClick={()=>{bgColor('orange')}}></button>
-                    <button id='pink' onClick={()=>{bgColor('pink')}}></button>
+                    <button id='darkpink' onClick={()=>{bgColor('rgb(162, 91, 200)')}}></button>
                     <button id='blue' onClick={()=>{bgColor('blue')}}></button>
+                    <button id='mediumvioletred' onClick={()=>{bgColor('mediumvioletred')}}></button>
+                    <button id='lime' onClick={()=>{bgColor('lime')}}></button>
+                    <button id='slategray' onClick={()=>{bgColor('slategray')}}></button>
+                    <button id='teal' onClick={()=>{bgColor('teal')}}></button>
+                    <button id='lavender' onClick={()=>{bgColor('lavender')}}></button>
+                    <button id='indigo' onClick={()=>{bgColor('indigo')}}></button>
+                    <button id='salmon' onClick={()=>{bgColor('salmon')}}></button>
+                    <button id='olive' onClick={()=>{bgColor('olive')}}></button>
                     
                   
                     <input 
@@ -106,7 +148,7 @@ return(
                   </div>
                 </div>
                   <div id="font-family">
-                  <h2 id='sub-heading'>Choose your Background Color</h2>
+                  <h2 id='sub-heading'>Choose your Font</h2>
                   <div id='fonts'>
                
                <h1 id='times-new' onClick={()=>{fontFamily('Times New Roman')}}>Hello</h1>
@@ -114,6 +156,7 @@ return(
                <h1 id='verdana' onClick={()=>{fontFamily('verdana')}}>Hello</h1>
                <h1 id='arial'  onClick={()=>{fontFamily('arial')}}>Hello</h1>
                <h1 id='impact' onClick={()=>{fontFamily('Impact')}}>Hello</h1>
+               <h1 id='monospace' onClick={()=>{fontFamily('monospace')}}>Hello</h1>
              </div>
                   </div>
 
@@ -137,6 +180,17 @@ return(
                       <button  id="bg-img8"onClick={()=>setBackground('/images/sunshine.avif')}/>
 
                       <button  id="bg-img9"onClick={()=>setBackground('/images/pinkflower.jpg')}/>
+
+                      <button  id="bg-img10"onClick={()=>setBackground('/images/moon.jpg')}/>
+
+                      <button  id="bg-img11"onClick={()=>setBackground('/images/mountain.jpg')}/>
+
+                      <button  id="bg-img12"onClick={()=>setBackground('/images/lily.jpg')}/>
+
+                      <button  id="bg-img13"onClick={()=>setBackground('/images/night.jpg')}/>
+
+                      <button  id="bg-img14"onClick={()=>setBackground('/images/road.jpg')}/>
+
 
                     </div>
 
