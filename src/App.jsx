@@ -94,7 +94,7 @@ return(
                     <button id='mediumvioletred' onClick={()=>{textColor('mediumvioletred')}}></button>
                     <button id='lime' onClick={()=>{textColor('lime')}}></button>
                     <button id='slategray' onClick={()=>{textColor('slategray')}}></button>
-                    <button id='teal' onClick={()=>{textColorolor('teal')}}></button>
+                    <button id='teal' onClick={()=>{textColor('teal')}}></button>
                     <button id='lavender' onClick={()=>{textColor('lavender')}}></button>
                     <button id='indigo' onClick={()=>{textColor('indigo')}}></button>
                     <button id='salmon' onClick={()=>{textColor('salmon')}}></button>
