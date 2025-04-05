@@ -10,8 +10,8 @@
 }
 
 #heading{
-  color:rgb(212, 158, 237);
-  text-shadow: 4px 0px 4px rgb(180, 196, 225);
+  color:rgb(225, 194, 240);
+  text-shadow: 4px 4px 4px rgb(169, 193, 237);
   font-size: 40px;
  
 }
@@ -25,7 +25,7 @@
   row-gap:30px;
   width:100%;
   height:100%;
-  background-image: linear-gradient(rgb(218, 183, 236),rgb(234, 138, 229));
+  background-image: linear-gradient(rgb(226, 198, 241),rgb(218, 160, 215));
   margin:auto;
 }
 
